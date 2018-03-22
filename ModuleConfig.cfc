@@ -40,6 +40,6 @@ component {
 	    		prc.hostnameHeader.javaError = e.message;
 	    	}
 	    }
-		event.setHTTPHeader( name = "Server-Hostname", value = prc.hostnameHeader.hostname );
+		event.setHTTPHeader( name = "x-server-hostname", value = prc.hostnameHeader.hostname );
 	}
 }
