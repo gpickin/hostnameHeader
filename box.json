@@ -1,8 +1,8 @@
 {
     "name":"hostnameHeader",
-    "version":"1.0.1",
+    "version":"1.0.2",
     "author":"Gavin Pickin",
-    "location":"gpickin/hostnameHeader#v1.0.1",
+    "location":"gpickin/hostnameHeader#v1.0.2",
     "homepage":"https://github.com/gpickin/hostnameHeader",
     "documentation":"https://github.com/gpickin/hostnameHeader",
     "repository":{
@@ -10,7 +10,7 @@
         "URL":"https://github.com/gpickin/hostnameHeader"
     },
     "bugs":"https://github.com/gpickin/hostnameHeader/issues",
-    "slug":"cors",
+    "slug":"hostnameHeader",
     "shortDescription":"Add Hostname headers to your app in one module",
     "description":"Add Hostname headers to your app in one module",
     "type":"modules",
