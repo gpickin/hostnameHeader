@@ -12,14 +12,14 @@ component {
     }
 
     /**
-     * This function is the core of the Hostname header module. This fires on preProcess and adds the hostname of the server to the event headers with the key Server-Hostname
+     * This function is the core of the Hostname header module. This fires on onRequestCapture and adds the hostname of the server to the event headers with the key X-Server-Hostname
      * @event         
      * @interceptData 
      * @buffer        
      * @rc            
      * @prc           
      */
-    function preProcess( event, interceptData, buffer, rc, prc ) {
+    function onRequestCapture( event, interceptData, buffer, rc, prc ) {
 
     	prc.hostnameHeader = {};
     	prc.hostnameHeader.hostname = "";
