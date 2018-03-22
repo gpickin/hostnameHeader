@@ -8,9 +8,17 @@ This module is ideal for clustered setups, or docker swarms, where the code coul
 
 ## How does it work?
 
+### Response Header
+
 The module sets a header called `x-server-hostname`.
 
+### When does it run?
+
 The module listens to the onRequestCapture ColdBox interception point.
+
+With Errors, this function might not run... if that interception point is not announced. You might need to add to your Application.cfc directly if errors occur before the ColdBox framework loads.
+
+### How does it determine the hostname?
 
 This module looks for the hostname a few different ways.
 
@@ -23,5 +31,4 @@ var hostname = inet.getLocalHost().getHostName();
 ```
 * Note - Java errors when trying to return a hostname that does not resolve to an IP, so in docker, this hashed hostname will not resolve, unless you add it dynamically to the /etc/hosts file.
 
-With Errors, this function might not run... if that interception point is not announced. You might need to add to your Application.cfc directly if errors occur before the ColdBox framework loads.
 
