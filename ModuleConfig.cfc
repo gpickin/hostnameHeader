@@ -23,7 +23,9 @@ component {
 
     	prc.hostnameHeader = {};
     	prc.hostnameHeader.hostname = "";
-
+        if( structKeyExists( server.os, "hostname" ) and len( server.os.hostname ) ){
+            prc.hostnameHeader.hostname = server.os.hostname;
+        }
     	if( !len( prc.hostnameHeader.hostname ) ){
     		try {
 	    		prc.hostnameHeader.hostname = fileRead( '/etc/hostname' );
