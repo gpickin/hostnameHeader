@@ -26,6 +26,9 @@ component {
         if( structKeyExists( server.os, "hostname" ) and len( server.os.hostname ) ){
             prc.hostnameHeader.hostname = server.os.hostname;
         }
+        if( structKeyExists( server, "x_hostname" ) and len( server.x_hostname ) ){
+            prc.hostnameHeader.hostname = server.x_hostname;
+        }
     	if( !len( prc.hostnameHeader.hostname ) ){
     		try {
 	    		prc.hostnameHeader.hostname = fileRead( '/etc/hostname' );
@@ -42,6 +45,7 @@ component {
 	    		prc.hostnameHeader.javaError = e.message;
 	    	}
 	    }
+        server.x_hostname = prc.hostnameHeader.hostname;
 		event.setHTTPHeader( name = "x-server-hostname", value = prc.hostnameHeader.hostname );
 	}
 }
