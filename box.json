@@ -1,8 +1,8 @@
 {
     "name":"hostnameHeader",
-    "version":"1.0.9",
+    "version":"1.3.0",
     "author":"Gavin Pickin",
-    "location":"gpickin/hostnameHeader#v1.0.9",
+    "location":"gpickin/hostnameHeader#v1.3.0",
     "homepage":"https://github.com/gpickin/hostnameHeader",
     "documentation":"https://github.com/gpickin/hostnameHeader",
     "repository":{
@@ -26,7 +26,7 @@
     "scripts":{
         "postVersion":"package set location='gpickin/hostnameHeader#v`package version`'",
         "onRelease":"publish",
-        "postPublish":"!git push && !git push --tags"
+        "postPublish":"!git push && git push --tags"
     },
     "ignore":[
         "**/.*",
